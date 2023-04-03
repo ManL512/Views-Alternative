@@ -6,34 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
-    <title>Cliente</title>
+    <title>Administrador</title>
 </head>
 
 <header>
 
-    <div class="menu-login-cliente">
+    <div class="menu-login">
         <!-- VOLVER -->
-        <div class="notificaciones">
+        <div class="volver">
             <a href="Index.html" class="iconos-menu">
-                <ion-icon name="arrow-back-circle-outline"></ion-icon>
+                
             </a>
         </div>
         <!-- LOGO -->
         <div class="logo"> <img src="logo.png" alt="" height="100"></div> 
 
         <!-- BARRA NAVBAR --> 
-        <b> <div class="nombre"> ¡Hola de nuevo, Miguel! </div> </b>
+        <b> <div class="nombre"> Bienvenido/a Miguel </div> </b>
 
         <!-- BOTONES -->
         <div class="social_media"> 
+
             <ion-icon name="notifications-outline" class="iconos-menu"></ion-icon>
-            <ion-icon name="calendar-outline"style="height: 50px; width: 50px;" class="iconos-menu"></ion-icon>
+            <ion-icon name="calendar-outline" class="iconos-menu"></ion-icon>
+            <button id="user-btn" class="iconos-menu">
+                <ion-icon name="person-circle-outline"></ion-icon>
+            </button>
+            <div id="user-popup"></div>
+              
         </div>
 
 </header>
 
 <body>
 
+    <script>
+       const notificationsBtn = document.querySelector('.social_media ion-icon[name="notifications-outline"]');
+            notificationsBtn.addEventListener('click', () => {
+            const notificationsPopup = document.createElement('div');
+            notificationsPopup.innerHTML = `
+                <h3>Notificaciones:</h3>
+                <ul>
+                <li>Tienes 3 nuevas notificaciones</li>
+                <li>Se ha creado un nuevo usuario</li>
+                <li>El sistema ha detectado un error</li>
+                </ul>
+                <button>Ver todas las notificaciones</button>
+            `;
+            notificationsPopup.style.position = 'absolute';
+            notificationsPopup.style.top = '50px';
+            notificationsPopup.style.right = '20px';
+            notificationsPopup.style.background = '#fff';
+            notificationsPopup.style.border = '1px solid #000';
+            notificationsPopup.style.padding = '10px';
+            notificationsPopup.style.display = 'none';
+            notificationsPopup.style.maxHeight = '300px';
+            notificationsPopup.style.overflowY = 'scroll';
+            document.body.appendChild(notificationsPopup);
+            notificationsPopup.style.display = 'block';
+            });
+            
+            
+
+            
+    </script>
+    <style>
+        
+        h1{
+            color: #054965;
+        }
+
+    </style>
        <!-- CONTENIDO PRINCIPAL -->
        <div class="main_content">
         <div class="left_arrow"><img src="./images/left_hand.png" alt=""></div>
@@ -45,12 +88,25 @@
                         <div class="line_gradient_separation"></div>
                     </div>
                 </div>
-                <p>¿Quieres lucir radiante y sentirte más seguro/a en tu piel? ¡Ven a nuestro centro estético y descubre cómo podemos ayudarte a alcanzar la mejor versión de ti mismo/a!</p>
-                <a href="Servicios.html" class="primary_button">Saber más</a>
+
+                <div class="enlaces">
+                    
+                    <div class="inventario">
+                        <a href="Administrador-inventario.html"> Solicitar una cita </a><br>
+                    </div>
+                   
+                    <div class="usuarios">
+                        <a href="productos.html"> Usuarios </a><br>
+                    </div>
+
+                    <div class="clientes">
+                        <a href="productos.html"> TO-DO </a><br>
+                    </div>
+
+                </div>
+
             </div>
-            <div class="slider_image">
-                <img src="clinica.jpg" alt="imagen-instalaciones" class="circular-image">
-            </div>
+
         </div>
         <div class="right_arrow"><img src="./images/right_hand.png" alt=""></div>
     </div>
@@ -59,7 +115,8 @@
 
     </div>
 
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>    
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>    
 </body>
 </html>
