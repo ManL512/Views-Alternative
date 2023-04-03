@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
-    <title>Administrador</title>
+    <title> Cliente </title>
 </head>
 
 <header>
@@ -28,7 +28,7 @@
         <div class="social_media"> 
 
             <ion-icon name="notifications-outline" class="iconos-menu"></ion-icon>
-            <ion-icon name="calendar-outline" class="iconos-menu"></ion-icon>
+            <ion-icon name="calendar-outline" class="iconos-menu" onclick="redirectToCalendarPage()"></ion-icon>
             <button id="user-btn" class="iconos-menu">
                 <ion-icon name="person-circle-outline"></ion-icon>
             </button>
@@ -39,37 +39,13 @@
 </header>
 
 <body>
-
+    
     <script>
-       const notificationsBtn = document.querySelector('.social_media ion-icon[name="notifications-outline"]');
-            notificationsBtn.addEventListener('click', () => {
-            const notificationsPopup = document.createElement('div');
-            notificationsPopup.innerHTML = `
-                <h3>Notificaciones:</h3>
-                <ul>
-                <li>Tienes 3 nuevas notificaciones</li>
-                <li>Se ha creado un nuevo usuario</li>
-                <li>El sistema ha detectado un error</li>
-                </ul>
-                <button>Ver todas las notificaciones</button>
-            `;
-            notificationsPopup.style.position = 'absolute';
-            notificationsPopup.style.top = '50px';
-            notificationsPopup.style.right = '20px';
-            notificationsPopup.style.background = '#fff';
-            notificationsPopup.style.border = '1px solid #000';
-            notificationsPopup.style.padding = '10px';
-            notificationsPopup.style.display = 'none';
-            notificationsPopup.style.maxHeight = '300px';
-            notificationsPopup.style.overflowY = 'scroll';
-            document.body.appendChild(notificationsPopup);
-            notificationsPopup.style.display = 'block';
-            });
-            
-            
-
-            
+        function redirectToCalendarPage() {
+            window.location.href = "calendario-cliente.html"; /* ESTA FUNCION ES COMPARTIDA CON EL CLIENTE */
+        }
     </script>
+
     <style>
         
         h1{
@@ -96,11 +72,11 @@
                     </div>
                    
                     <div class="usuarios">
-                        <a href="productos.html"> Usuarios </a><br>
+                        <a href="productos.html"> Por definir (?) </a><br>
                     </div>
 
                     <div class="clientes">
-                        <a href="productos.html"> TO-DO </a><br>
+                        <a href="productos.html"> Por definir (?) </a><br>
                     </div>
 
                 </div>
