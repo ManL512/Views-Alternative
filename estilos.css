@@ -3,13 +3,63 @@
 * {
     font-family: 'Lexend Deca';
 }
+.division{
+    height: 40px;
+}
+.nosotros{
+    display: block;
+    background-color: #FFF5FD;
+    height: 500px;
+}
+
+.contactanos{
+               display: block;
+    background-color: #FFF5FD;
+    height: 500px;
+}
+
+.box-servicios {
+    background-color: #FFA3FD;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .box-servicios img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+    .box-servicios a {
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+    .box-servicios p {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 10px;
+    cursor: pointer;
+}
 
 .whatsapp {
     display: block;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: green;
+    background-color: #973897;
     color: white;
     padding: 10px;
     border-radius: 50%;
@@ -17,8 +67,19 @@
     font-size: 20px;
     z-index: 9999;
     border-radius: 50%;
+    animation: blink 1s ease-in-out infinite;
   }
-  
+
+@keyframes blink {
+    50% {
+     opacity: 0.5;
+    }
+}
+.whatsapp:hover {
+    transition: background-color 0.5s ease-in-out;
+    background-color: #25d366;
+}
+    
 body{
     background-color: #FFA3FD;
 }
@@ -404,6 +465,16 @@ color: #2E2E2E;
 #user-popup button:hover {
     background-color: #dfb2de;
 }
+
+
+
+.oculto {
+    display: none;
+}
+.enlaces div:hover .oculto {
+    display: block;
+}
+
 
 
 
