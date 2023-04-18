@@ -12,46 +12,16 @@
     height: 500px;
 }
 
-.contactanos{
-               display: block;
-    background-color: #FFF5FD;
-    height: 500px;
-}
-
-.box-servicios {
-    background-color: #FFA3FD;
-    width: 200px;
-    height: 200px;
+.servicios {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    border-radius: 10px;
-    overflow: hidden;
+    height: 100vh;
 }
 
-    .box-servicios img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-    .box-servicios a {
-    color: #ffffff;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 10px;
-}
-
-    .box-servicios p {
-    color: #ffffff;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: underline;
-    margin-top: 10px;
-    cursor: pointer;
+.contactanos{
+    display: block;
+    background-color: #FFF5FD;
+    height: 500px;
 }
 
 .whatsapp {
@@ -97,14 +67,21 @@ p {
     font-size: 2rem;
 }
 
-.circular-image {
+.main_content_img {
     display: flex;
     align-items: flex-end;
     height: 500px;
     border-radius: 50%;
     overflow: hidden;
   }
-  
+
+.nosotros_img{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 500px;
+}
+
 .menu {
     text-decoration: none;
     color: aliceblue;
@@ -210,23 +187,37 @@ img {
 .slider_content {
     background-color: #FFEAEA;
     box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.16);
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem 4rem;
     box-sizing: border-box;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
 }
 
 .slider_description {
     display: grid; /* establece el tipo de visualización de los elementos seleccionados en "grid" o "cuadrícula". Esto significa que los elementos se colocarán en un formato de cuadrícula, con filas y columnas. */
     grid-template-columns: 1fr; /* especifica el tamaño y el número de columnas en la cuadrícula. */
     column-gap: 0; /* establece la distancia entre las columnas de la cuadrícula en cero píxeles. */
+    flex-basis: 50%;
 }
+
+
+.slider_image {
+    flex-basis: 50%;
+    height: 100%;
+    float: right;
+  }
+  
 
 .slider_content img {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .slider_title {
