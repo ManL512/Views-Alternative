@@ -25,18 +25,30 @@
         <b> <div class="nombre"> Bienvenido/a Gerente Miguel </div> </b>
 
         <!-- BOTONES -->
-        <div class="social_media"> 
 
+        <div class="social_media"> 
+            <a class="icon-link">
             <ion-icon name="notifications-outline" class="iconos-menu"></ion-icon>
-            <ion-icon name="mail-outline" class="iconos-menu"></ion-icon>
+            </a>
+            
+            <a href="Administrador-envioCorreo.html" class="icon-link">
+              <ion-icon name="mail-outline" class="iconos-menu"></ion-icon>
+            </a>
+
+            <a href="" class="icon-link">
             <ion-icon name="document-text-outline" class="iconos-menu"></ion-icon>
+            </a>
+
+            <a href="calendario-cliente.html" class="icon-link">
             <ion-icon name="calendar-outline" class="iconos-menu"></ion-icon>
+            </a>
+
             <button id="user-btn" class="iconos-menu">
-                <ion-icon name="person-circle-outline"></ion-icon>
+              <ion-icon name="person-circle-outline"></ion-icon>
             </button>
             <div id="user-popup"></div>
-              
         </div>
+          
 
 </header>
 
@@ -55,6 +67,16 @@
             display: block;
         }
 
+        .icon-link {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+        }
+
+        .icon-link ion-icon {
+            font-size: 2em;
+        }
         
     </style>
        <!-- CONTENIDO PRINCIPAL -->
@@ -72,18 +94,18 @@
                 <div class="enlaces">
                     <div class="inventario">
                       <a href="Administrador-inventario.html">Reportes</a>
-                      <p class="oculto">ABCDEF.</p>
+                      <h3 class="oculto">Enviar reporte a casa matriz.</h3>
                       <p class="oculto"></p>
                     </div>
                     
                     <div class="usuarios">
                       <a href="productos.html">Inventario</a>
-                      <p class="oculto">ABCDEF.</p>
+                      <h3 class="oculto">Visualizar inventario.</h3>
                     </div>
                   
                     <div class="clientes">
                       <a href="productos.html">Clientes</a>
-                      <p class="oculto">ABCDEF.</p>
+                      <h3 class="oculto">Visualizar clientes.</h3>
                     </div>
                   </div>
                   
