@@ -71,7 +71,7 @@ p {
     display: flex;
     align-items: flex-end;
     height: 500px;
-    border-radius: 50%;
+    border-radius: 0.5%;
     overflow: hidden;
   }
 
